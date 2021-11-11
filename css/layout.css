@@ -1,0 +1,330 @@
+@charset "utf-8";
+.fWrap, .contents, .pageNavi{max-width: 1180px; margin: 0 auto;}
+/*header*/
+
+#header{margin: 0 auto;}
+
+/* GNB */
+.nav_wrapper {
+  width: 100%;
+  transition: top 0.5s ease-out;
+  position: absolute;
+  top: 52px;
+  z-index: 99999;
+  display: flex;  
+  justify-content: flex-end;
+}
+.main_logo a{
+  background: url(../images/common/logo.png) no-repeat center;
+  background-size: contain;
+  padding: 24px 71px;
+  position: relative;
+  top: 22px;
+}
+.spinner-master {
+  display: none;
+}
+
+.gnb {
+  width: 70%;
+  height: auto;
+  margin-left: 58px;
+  background-color: rgb(0, 0, 0, .2);
+  transition: all 0.4s ease;
+}
+.gnb ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  display: inline-block;
+}
+.gnb > li > ul.sub_menu {
+  min-width: 10em;
+  padding: 4px 0;
+  background-color: #f4f4f4;
+  border: 1px solid #fff;
+}
+.gnb ul li {
+  padding: 0;
+}
+.gnb > ul > li {
+  display: inline-block;
+}
+.gnb .lang > a{
+    padding: 21px 18px;
+/*    line-height: 60px;
+    background: url(../images/common/line_wh.png) no-repeat center right;*/
+}
+.gnb li a.on {
+    font-weight: bold;
+    background-color: #d0102e;
+    color: #fff;
+    border-radius: 24px;
+    padding: 4px 8px;
+}
+
+
+.gnb ul li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+.gnb ul li a:hover {
+  font-weight: bold;
+}
+.gnb ul li.hover > a {
+  color: #fff;
+  text-decoration: underline;
+}
+.gnb ul li > a {
+  padding: 21px 84px;
+}
+.gnb ul ul {
+  display: none;
+  position: absolute;
+  top: 101%;
+  min-width: 240px;
+  background-color: rgb(0, 0, 0, .2);
+}
+.gnb ul li:hover > ul {
+  display: block;
+}
+.gnb ul ul > li {
+  position: relative;
+}
+.gnb ul ul > li a {
+  padding: 21px 15px;
+  height: auto;
+}
+.gnb ul ul > li a:hover {
+  color: #d0102e;
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
+.gnb ul ul ul {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+
+/* footer */
+#footer{padding: 28px 0; background-color: #333;}
+.footer{margin-top: -10px;}
+.fnb {padding-bottom: 15px; text-align: center;}
+.fnb  a{font-size: 14px; color: #fff; font-weight: bold; opacity: 0.8;}
+.copyright{font-size: 14px; color: #999999; line-height: 24px; letter-spacing: -0.5px;
+  text-align: center;}
+
+.footer-sns{
+  	padding: 8px 38px 8px 68px;
+    border: solid 1px #ccc;
+    background: url(../images/icon/Icon_insta.png) no-repeat left 38px center;
+    /*position: relative;
+    bottom: 34px;*/
+}
+.footer-sns a{
+	width: 100%;
+	color: #ccc;
+	font-size: 14px;
+	vertical-align: top;
+}
+.snsbtwrap{
+    text-align: right;
+    position: relative;
+    top: 98px;
+}
+
+
+@media all and (max-width: 1680px) {
+  .gnb ul li > a {   padding: 21px 56px;  }
+  .gnb .lang > a {   padding: 21px 14px;  }
+  .gnb ul ul { min-width: 184px; }
+}
+
+/* 모바일 CSS */
+@media all and (max-width: 1024px) {
+  .nav_wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .8);
+    display: block;
+  }
+
+  .main_logo{margin: 0 auto; width: 142px; height: 60px;}
+  .main_logo a {
+    padding: 10px 71px;
+    top: 18px;
+  }
+  .gnb {
+    width: 100%;
+    margin-left: 0;
+    clear: both;
+    min-width: inherit;
+    float: none;
+  }
+  .gnb,
+  .gnb > ul ul {
+    overflow: hidden;
+    max-height: 0;
+    background-color: #222;
+  }
+  .gnb > li > ul.sub-menu {
+    padding: 0;
+    border: none;
+  }
+  .gnb.active,
+  .gnb > ul ul.active {
+    max-height: 55em;
+  }
+  .gnb ul {
+    display: inline;
+  }
+  .gnb ul li a {
+    text-align: left;
+    padding: 15px;
+  }
+  .gnb li,
+  .gnb > ul > li {
+    display: block;
+  }
+  .gnb > ul > li:last-of-type a {
+    border: none;
+  }
+  .gnb li a {
+    color: #fff;
+    display: block;
+    padding: 0.8em;
+    position: relative;
+  }
+  .gnb li.has-submenu > a:after {
+    content: "+";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    font-size: 32px;
+    line-height: 28px;
+    padding: 10px;
+  }
+  .gnb li.has-submenu > a.active:after {
+    content: "-";
+    padding: 10px 16px;
+  }
+  .gnb ul ul > li a {
+    background-color: #333;
+    padding: 10px 18px 10px 30px;
+  }
+  .gnb ul li a:hover {
+    background: rgba(255,255,255, .8);
+    color: #333;
+  }
+  .gnb ul li.hover > a {
+    background: rgba(255,255,255, .8);
+    color: #333;
+  }
+  .gnb ul ul,
+  .gnb ul ul ul {
+    display: inherit;
+    position: relative;
+    left: auto;
+    top: auto;
+    border: none;
+  }
+  .spinner-master {
+    display: block;
+    position: relative;
+    margin: 17px;
+    height: 25px;
+    width: 30px;
+    float: right;
+  }
+
+  .nav-toggle span,
+  .nav-toggle span:before,
+  .nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 4px;
+    width: 27px;
+    background: #fff;
+    position: absolute;
+    display: block;
+    content: "";
+    transition: all 500ms ease-in-out;
+  }
+  .nav-toggle {
+    display: block;
+    height: 25px;
+  }
+  .nav-toggle span {
+    top: 10px;
+  }
+  .nav-toggle span:before {
+    top: -9px;
+  }
+  .nav-toggle span:after {
+    bottom: -9px;
+  }
+  .nav-toggle.active span {
+    background-color: transparent;
+  }
+  .nav-toggle.active span:before {
+    transform: rotate(135deg);
+    top: 0;
+  }
+  .nav-toggle.active span:after {
+    transform: rotate(-135deg);
+    top: 0;
+  }
+
+  .gnb .lang{
+    float: left;
+    width: 33.333%;
+    background-color: #999;
+  }
+  .gnb .lang a{
+    color: #222;
+    text-align: center;
+    line-height: 50px;
+    padding: 0;
+    border-top: 1px solid #444;
+    border-left: 1px solid #444;
+  }
+  .gnb .lang:last-of-type a {
+    border-top: 1px solid #444 !important;
+    border-left: 1px solid #444 ;
+  }
+  .gnb li a.on {
+    font-weight: bold;
+    background-color: #d0102e;
+    color: #fff;
+    border-radius: 0;
+    line-height: 50px;
+    padding: 0;
+    border: 1px slid #d0102e;
+  }
+  .fWrap, .contents, .pageNavi {
+    max-width: 767px;
+  }
+  .footer-sns{
+    position : inherit;
+  }
+  .fWrap .footer{   margin-top: 25px;  }
+  .copyright{letter-spacing:-1px;}
+  .snsbtwrap{  text-align: center;     position: static;  }
+}
+
+@media all and (max-width: 767px) {
+  .footer div:nth-child(2){ padding: 0 6px;  }
+  .footer div:nth-child(3){    padding: 0 20px;  }
+  .footer div:nth-child(4){    padding: 0 10px;  }
+  .gnb ul li a:hover {
+    background: rgba(0,0,0, 0);
+    color: #d0102e;
+    }
+}

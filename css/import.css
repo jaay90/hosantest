@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/*=================================================================================
+ * Style Import
+ =================================================================================*/
+@import url("layout.css"); /* header / footer */
+@import url("swiper.css"); /* swiper ui css */
+@import url("animation.css"); /* swiper ui css */
+
+/*=================================================================================
+ * Default Tag Style
+ =================================================================================*/
+
+html, body {height:100%;font-family:'맑은고딕','Malgun Gothic', sans-serif; font-weight:400; font-size:16px; color:#555;-webkit-text-size-adjust:none;-moz-text-size-adjust:none;-ms-text-size-adjust:none;} /* 나눔고딕 기본값을 초기값으로 지정, 아이폰 폰트 사이즈 변환방지 설정 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,select,input,textarea,p,blockquote,th,td,figure,figcaption {margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,details,menu,figure,figcaption {display:block;} /* html5 태그 초기 설정 값 */
+h1,h2,h3,h4,h5,h6 {font-weight:normal;font-size:100%;}
+img,legend,fieldset,button {border:none;}
+input,select,textarea {font-family:inherit;font-size:inherit;font-weight:inherit;vertical-align:middle;} /* 기본 설정값으로 초기화 */
+table {border-collapse:collapse;table-layout:fixed;}
+caption,legend {width:0;height:0;line-height:0;visibility:hidden;font-size:0;} /* 사용하지 않는 전제 조건 */
+ul,ol,li {list-style-type:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;} /* 익스 9부터 적용가능 */
+hr {display:none;}
+em {font-style:normal;}
+strong,b {font-weight:normal;}
+textarea {resize:none;} /* 리사이징 초기화 : 리사이징을 원하면 해당영역을 주석처리 해주세요 */
+
+a, a:link, a:visited, a:active {text-decoration:none;}
+a[class~="btn"] {vertical-align:middle;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;text-decoration:none;} /* 버튼의 경우에 언더라인 삭제 */
+
+.clfix:after {content: "."; display: block; height: 0px; clear: both; visibility: hidden;}
+.clfix {display: inline-block;}
+.clfix {display: block;}
+* html .clfix {height: 1%;} /* Hides from IE-mac */
+.clfix {zoom: 1;} /*for IE 5.5-7*/
+
+.blind {font-size:0;height:1px !important;position:absolute !important;top:-9999px !important;width: 1px !important;} /* ir 처리 및 숨김영역 공통 */
+.ellipsis {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;} /* 한줄 텍스트 줄임표 설정 */
+
+/*text*/
+.textbold{
+    font-weight: bold;
+}
+.textred{
+    color: #d0102e;
+}
+.font20{font-size: 20px;}
